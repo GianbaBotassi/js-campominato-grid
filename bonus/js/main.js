@@ -5,7 +5,7 @@ const container = document.getElementById('container');
 const play = document.getElementById("play");
 
 // Dichiaro e assegno a variabile valore livello da DOM 
-const lvlDifficulty = document.getElementById('level').value;
+let lvlDifficulty = document.getElementById('level').value;
 
 // Aggiungo click bottone su play per attivare classe d-flex a container
 play.addEventListener("click",
@@ -13,6 +13,8 @@ play.addEventListener("click",
     container.innerHTML = "";
 
     container.classList.add('active');
+    
+    lvlDifficulty = document.getElementById('level').value;
 
     if(lvlDifficulty === "easy"){
         cycleElementsClass(1,100,"gridx10");
