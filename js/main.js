@@ -1,8 +1,3 @@
-// L’utente clicca su un bottone che genererà una griglia di gioco quadrata.
-// Ogni cella ha un numero progressivo, da 1 a 100.
-// Ci saranno quindi 10 caselle per ognuna delle 10 righe.
-// Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
-
 // Dichiaro e assegno una variabile al container nel DOM
 const container = document.getElementById('container');
 
@@ -11,15 +6,14 @@ const play = document.getElementById("play");
 
 // Aggiungo click bottone su play per attivare classe d-flex a container
 play.addEventListener("click",
-    () => {
-        container.classList.add('active');
-}
+    () => container.classList.add('active')
 );
 
 
 // Ciclo i numeri da 1 a 100 inserendo uno span con classe square con all'interno un numero
 for(let i = 1; i <= 100; i++){
 
+    // Richiamo funzione crea elementi con classe
     const newSquare = createElementClass("span","square");
     container.append(newSquare);
     newSquare.append(i);
