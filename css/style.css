@@ -1,0 +1,57 @@
+/* General styles */
+
+/* HEADER */
+header{
+    height: 8vh;
+}
+
+main{
+    height: 87vh;
+    background-color: #7fffd4;
+}
+footer{
+    height: 5vh;
+}
+
+#logo img{
+    max-width: 100%;
+    height: 50px;
+}
+
+/* MAIN */
+#container{
+    height: 600px;
+    width: 600px;
+    border: solid black 1px;
+}
+
+.d_none{
+    display: none;
+}
+
+.active{
+    display: flex;
+}
+
+.square{
+    width: calc(100% / 10);
+    height:calc(100% / 10);
+    border: solid black 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.blue{
+    background-color: #007bff;
+}
+
+
+
+
+/* DEBUG */
+
+
+
+
