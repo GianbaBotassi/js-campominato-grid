@@ -4,29 +4,26 @@ const container = document.getElementById('container');
 // Dichiaro e assegno variabile a bottone PLAY nel DOM
 const play = document.getElementById("play");
 
-// Dichiaro e assegno a variabile valore livello da DOM 
-let lvlDifficulty = document.getElementById('level').value;
-
 // Aggiungo click bottone su play per attivare classe d-flex a container
 play.addEventListener("click",
     () => {
+    // Svuoto container da vecchia griglia per poter cambiare difficoltà
     container.innerHTML = "";
-
-    container.classList.add('active');
     
-    lvlDifficulty = document.getElementById('level').value;
+    // Dichiaro e assegno a variabile valore livello nel DOM 
+    const lvlDifficulty = document.getElementById('level').value;
 
     if(lvlDifficulty === "easy"){
-        cycleElementsClass(1,100,"gridx10");
+        cycleElementsClass(1,100,"grid10x10");
     }else if (lvlDifficulty === "medium") {
-        cycleElementsClass(1,81,"gridx9");
+        cycleElementsClass(1,81,"grid9x9");
     }else if(lvlDifficulty === "hard"){
-        cycleElementsClass(1,49,"gridx7");
+        cycleElementsClass(1,49,"grid7x7");
     }
 }
 );
 
-// FUNCTIONS
+/*************************** FUNCTIONS *****************************/
 
 // Function to create new tag element with class
 function createElementClass(elementTag, classToAdd){
@@ -47,9 +44,10 @@ function cycleElementsClass(min, max, typeOfGrid){
         container.append(newSquare);
         newSquare.append(i);
 
+        // Aggiunto cambio bg color al click (add blue class)
         newSquare.addEventListener("click",
             function(){
-                newSquare.classList.add("blue");
+                this.classList.add("blue");
                 console.log(i);
             }
         )

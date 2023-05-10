@@ -24,14 +24,6 @@ footer{
     width: 600px;
 }
 
-.d_none{
-    display: none;
-}
-
-.active{
-    display: flex;
-}
-
 .square{
     border: solid black 1px;
     display: flex;
@@ -40,18 +32,17 @@ footer{
     cursor: pointer;
 }
 
-.gridx10{
+.grid10x10{
     width: calc(100% / 10);
     height:calc(100% / 10);
 }
-.gridx9{
+.grid9x9{
     width: calc(100% / 9);
     height:calc(100% / 9);
 }
-.gridx7{
+.grid7x7{
     width: calc(100% / 7);
     height:calc(100% / 7);
-
 }
 
 .blue{
